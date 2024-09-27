@@ -214,7 +214,7 @@ const SupabaseRepo = () => {
     try {
       const allowjobcount = await getuserallowjob();
       const jobcount = await getuserjob();
-      if (allowjobcount <= jobcount) {
+      if (allowjobcount - 1 <= jobcount && allowjobcount > 1) {
         router.push("/#price");
       }
     } catch (error) {
