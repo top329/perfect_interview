@@ -12,12 +12,11 @@ export default function PricingTableList() {
             title="Standard"
             price="10"
             currency="$"
-            timeline="monthly"
+            jobs=""
             features={[
-              "1 custom job",
-              "Unlock all question",
-              "Unlimited mock interviews",
-              "Custom questions",
+              "1 Custom Jobs",
+              "Unlock All Questions",
+              "Unlimited Mock Interviews",
             ]}
             btnText="Purchase Now"
           />
@@ -29,12 +28,11 @@ export default function PricingTableList() {
             title="Professional"
             price="20"
             currency="$"
-            timeline="monthly"
+            jobs="5"
             features={[
-              "5 custom job",
-              "Unlock all question",
-              "Unlimited mock interviews",
-              "Custom questions",
+              "5 Custom Jobs",
+              "Unlock All Questions",
+              "Unlimited Mock Interviews",
             ]}
             btnText="Purchase Now"
           />
@@ -46,12 +44,11 @@ export default function PricingTableList() {
             title="Ultimate"
             price="50"
             currency="$"
-            timeline="monthly"
+            jobs="20"
             features={[
-              "20 custom job",
-              "Unlock all question",
-              "Unlimited mock interviews",
-              "Custom questions",
+              "20 Custom Jobs",
+              "Unlock All Questions",
+              "Unlimited Mock Interviews",
             ]}
             btnText="Purchase Now"
           />
