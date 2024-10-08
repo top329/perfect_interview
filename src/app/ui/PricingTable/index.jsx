@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import Div from "../Div";
 import { useRouter } from "next/navigation";
+import { useAuth } from "@clerk/nextjs";
 
 export default function PricingTable({
   title,
@@ -11,6 +12,7 @@ export default function PricingTable({
   btnText,
   jobs,
 }) {
+  const { isSignedIn } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
   const item = {
     name: "Subscibe to interviewamigo",
@@ -20,6 +22,7 @@ export default function PricingTable({
   };
   const router = useRouter();
   const createCheckOutSession = async () => {
+    if (!isSignedIn) return router.push("/sign-in");
     setIsLoading(true);
     const checkoutSession = await fetch("/api/create-stripe-session", {
       method: "POST",
